@@ -9,19 +9,6 @@
   </div>
 </div>
 
-
-<div class="row">
-  <div class="col-4">
-    <div class="card">
-      <h5 class="card-header">Séries mais populares</h5>
-      <div class="ratio ratio-1x1">
-      <img src="img/thisisus.jpg" alt="" class="card-img-top" style="object-fit: contain;">
-      </div>
-      </div>
-    </div>
-  </div>
-
-
 </template>
 
 <script>
@@ -32,6 +19,7 @@ name: 'HomeView'
 </script>
 
 <style scoped>
+
 h1{
   font-weight: bold;
   margin-top: 60px;
@@ -44,9 +32,4 @@ h1{
 .container{
   margin-top: 35px;
 }
-
-.card{
-  margin: 20px;
-}
-
 </style>
