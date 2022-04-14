@@ -3,15 +3,14 @@
      <router-link to='/' id='txt-url'>Tracking the TV</router-link>
      <router-link to='/about'>Sobre</router-link>
      <router-link to='/contact'>Contato</router-link>
-     <!-- criar pagina de login -->
-     <router-link to='/contact'>Login</router-link>
+     <router-link to='/login'>Login</router-link>
   </div>
   
 </template>
 
 <script>
 export default {
-    name:'NavBar'
+    name:'NavbarView'
 }
 </script>
 
@@ -26,7 +25,7 @@ export default {
 }
 
 #nav a{
-  color: #FCBA03;
+  color: #2691d9;
   text-decoration: none;
   margin: 12px;
   transition: .5s;

@@ -1,6 +1,9 @@
 <template>
+<div class="title text-center">
+  <h1>QUEM SOMOS</h1>
+</div>
   <div class="about d-flex justify-content-center">  
-    <div class="container-box">
+    <div class="container-box text-center">
       <div class="content-box">
         A tracking the TV veio para solucionar na hora da busca do que o usuário quer assistir, trazendo os catálogos das plataformas disponíveis onde o usuário poderá filtrar sua busca de acordo com a sua preferência naquele momento, encontrando todas as opções em um só lugar.
       </div>
@@ -15,8 +18,6 @@ export default {
 </script>
 
 <style scoped>
-body{
-}
 
 .about{
   margin-top: 40px;
@@ -32,8 +33,13 @@ body{
 }
 
 .content-box{
-  padding: 30px;
+  padding: 40px;
 }
+
+.title{
+ margin-top: 230px;
+}
+
 
 </style>
 

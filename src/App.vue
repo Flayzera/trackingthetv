@@ -1,16 +1,16 @@
 <template>
-<NavBar />
+<NavbarView />
   <router-view />
 <FooterView />
 </template>
 
 <script>
 import FooterView from './components/Footer.vue'
-import NavBar from './components/Navbar.vue'
+import NavbarView from './components/Navbar.vue'
 export default {
 
   components: {
-    NavBar,
+    NavbarView,
     FooterView
   }
   

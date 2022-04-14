@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="col-3">
-        <p class="title text-center">Lançamentos</p>
+        <p class="title text-center">Lançamentos mais populares</p>
         <div class="d-flex justify-content-center">
           <div class="card-home c4">
           </div>
@@ -54,7 +54,7 @@ name: 'HomeView'
 
 h1{
   font-weight: bold;
-  margin-top: 60px;
+  margin-top: 70px;
   font-size: 96px;
 }
 
@@ -71,10 +71,13 @@ h1{
 .card-home{
   width: 188px;
   height: 267px;
-  background-color: red;
 }
 
 .title{
   font-weight: bold;
+}
+
+.row{
+  margin-top: 8%;
 }
 </style>
