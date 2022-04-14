@@ -1,7 +1,9 @@
 <template>
-  <div class="container-box">
-    <div class="content-box">
-      A tracking the TV veio para solucionar na hora da busca do que o usuário quer assistir, trazendo os catálogos das plataformas disponíveis onde o usuário poderá filtrar sua busca de acordo com a sua preferência naquele momento, encontrando todas as opções em um só lugar.
+  <div class="about d-flex justify-content-center">  
+    <div class="container-box">
+      <div class="content-box">
+        A tracking the TV veio para solucionar na hora da busca do que o usuário quer assistir, trazendo os catálogos das plataformas disponíveis onde o usuário poderá filtrar sua busca de acordo com a sua preferência naquele momento, encontrando todas as opções em um só lugar.
+      </div>
     </div>
   </div>
 </template>
@@ -14,8 +16,11 @@ export default {
 
 <style scoped>
 body{
-  width: 100px;
-  height: 100px;
+}
+
+.about{
+  margin-top: 40px;
+  min-height: 400px;
 }
 
 .container-box{

@@ -3,6 +3,8 @@
      <router-link to='/' id='txt-url'>Tracking the TV</router-link>
      <router-link to='/about'>Sobre</router-link>
      <router-link to='/contact'>Contato</router-link>
+     <!-- criar pagina de login -->
+     <router-link to='/contact'>Login</router-link>
   </div>
   
 </template>

@@ -1,0 +1,15 @@
+.card-home{
+	background-size: cover;
+}
+.card-home.c1{
+	background-image: url('../img/thisisus.jpg');
+}
+.card-home.c2{
+	background-image: url('../img/abouttime.jpg');
+}
+.card-home.c3{
+	background-image: url('../img/kimetsu.jpg');
+}
+.card-home.c4{
+	background-image: url('../img/doctorstrange2.jpg');
+}
