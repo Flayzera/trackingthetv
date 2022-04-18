@@ -25,7 +25,7 @@ export default {
 }
 
 #nav a{
-  color: #2691d9;
+  color: #FFF;
   text-decoration: none;
   margin: 12px;
   transition: .5s;

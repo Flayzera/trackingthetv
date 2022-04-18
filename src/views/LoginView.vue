@@ -4,17 +4,17 @@
     <h1>Login</h1>
     <form method="post">
         <div class="txt-field">
-            <input type="text">
+            <input type="text" required>
             <span></span>
-            <label>Username</label>
+            <label>Usuário</label>
         </div>
         <div class="txt-field">
-            <input type="text" >
+            <input type="text" required>
             <span></span>
-            <label>Password</label>
+            <label>Informe sua senha</label>
         </div>
-        <input type="submit" value="Login">
-        <input type="submit" value="Register">
+        <button class="btn" @click="$router.push('/')">Login</button>
+        <router-link to='/register' class="btn">Cadastre-se</router-link>
     </form>
     </div>
 </div>
@@ -48,7 +48,7 @@ export default {
     .center h1{
         text-align: center;
         padding: 0 0 20px 0;
-        border-bottom: 1px solid silver;
+        border-bottom: 1px solid black;
     }
 
     .center form{
@@ -89,25 +89,25 @@ export default {
         left: 0;
         width: 0%;
         height: 2px;
-        background: #2691d9;
+        background: black;
         transition: .5s;
     }
 
     .txt-field input:focus ~ label,
     .txt-field input:valid ~ label{
      top: -5px;   
-     color: #2691d9;
+     color: black;
     }
     .txt-field input:focus ~ span::before,
     .txt-field input:valid ~ span::before{
      width: 100%;
     }
     
-    input[type="submit"]{
+    .btn{
         width: 100%;
         height: 50px;
         border: 1px solide;
-        background: #2691d9;
+        background: black;
         border-radius: 25px;
         font-size: 18px;
         color: #fff;
@@ -115,7 +115,7 @@ export default {
         cursor: pointer;
         outline: none;
     }
-    input[type="submit"]:hover{
+    .btn:hover{
         border-color: #adadad;
         transition: .5s;
     }

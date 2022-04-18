@@ -12,7 +12,7 @@
       <div class="col-3">
         <p class="title text-center">Séries mais populares</p>
         <div class="d-flex justify-content-center">
-          <div class="card-home c1">
+          <div class="card-home c1" @click="$router.push('/info1')">
           </div>
         </div>
       </div>
@@ -71,6 +71,7 @@ h1{
 .card-home{
   width: 188px;
   height: 267px;
+  cursor: pointer;
 }
 
 .title{

@@ -7,6 +7,7 @@
 <script>
 import FooterView from './components/Footer.vue'
 import NavbarView from './components/Navbar.vue'
+
 export default {
 
   components: {

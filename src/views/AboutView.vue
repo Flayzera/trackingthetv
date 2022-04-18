@@ -1,6 +1,6 @@
 <template>
 <div class="title text-center">
-  <h1>QUEM SOMOS</h1>
+  <h1 class="text-align">QUEM SOMOS</h1>
 </div>
   <div class="about d-flex justify-content-center">  
     <div class="container-box text-center">

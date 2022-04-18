@@ -1,47 +1,42 @@
 <template>
- 
-<div class="container">
+    <div class="container">
     <div class="center">
-    <h1>Registre-se</h1>
+    <h1>Contate-nos</h1>
     <form method="post">
         <div class="txt-field">
             <input type="text">
             <span></span>
-            <label>Nome Completo</label>
+            <label>Informe seu nome</label>
         </div>
         <div class="txt-field">
-            <input type="text">
+            <input type="text" >
             <span></span>
-            <label>E-mail</label>
+            <label>Informe seu e-mail</label>
         </div>
-        <div class="txt-field">
-            <input type="text">
-            <span></span>
-            <label>Usuário</label>
+        <div>
+        <label class="mb-2">Mensagem</label>
+          <textarea type="text" class="msg"></textarea>            
         </div>
-        <div class="txt-field">
-            <input type="text">
-            <span></span>
-            <label>Senha</label>
-        </div>
-        <router-link to='/' class="btn">Cadastre-se</router-link>
+        
+        <button class="btn">Enviar</button>
     </form>
-</div>
+    </div>
 </div>
 </template>
 
 <script>
 export default {
-    name: 'RegisterView'
+    name: 'ContactView'
 }
 </script>
 
 <style scoped>
- .container{
+   .container{
        margin: 0;
        padding: 0;
        height: 100vh;
        overflow: hidden;
+       float: left;
    }
 
     .center{
@@ -128,5 +123,15 @@ export default {
         border-color: #adadad;
         transition: .5s;
     }
+    
+    .msg{
+        display: flex;
+        margin-bottom: 20px;
+        height: 150px;
+        width: 100%;
+        border: 2px solid black;
+        padding: 5px;
+    }
 
+   
 </style>
