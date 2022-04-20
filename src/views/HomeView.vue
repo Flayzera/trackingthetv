@@ -46,7 +46,12 @@
 <script>
 import '../assets/home.css';
 export default {
-name: 'HomeView'
+  name: 'HomeView',
+  mounted(){
+    if(localStorage.getItem('isLoggedIn') != 'yes'){
+      this.$router.push('/login')
+    }
+  }
 }
 </script>
 

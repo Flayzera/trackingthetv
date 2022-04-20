@@ -4,12 +4,12 @@
     <h1>Contate-nos</h1>
     <form method="post">
         <div class="txt-field">
-            <input type="text">
+            <input type="text" required>
             <span></span>
             <label>Informe seu nome</label>
         </div>
         <div class="txt-field">
-            <input type="text" >
+            <input type="text" required>
             <span></span>
             <label>Informe seu e-mail</label>
         </div>
@@ -66,7 +66,7 @@ export default {
         margin: 30px 0;
     }
     .txt-field input{
-        widows: 100%;
+        width: 100%;
         padding: 0 5px;
         height: 40px;
         font-size: 16px;

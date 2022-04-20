@@ -3,24 +3,24 @@
 <div class="container">
     <div class="center">
     <h1>Registre-se</h1>
-    <form method="post">
+    <form >
         <div class="txt-field">
-            <input type="text">
+            <input type="text" required>
             <span></span>
             <label>Nome Completo</label>
         </div>
         <div class="txt-field">
-            <input type="text">
+            <input type="text" required>
             <span></span>
             <label>E-mail</label>
         </div>
         <div class="txt-field">
-            <input type="text">
+            <input type="text" required>
             <span></span>
             <label>Usuário</label>
         </div>
         <div class="txt-field">
-            <input type="text">
+            <input type="text" required>
             <span></span>
             <label>Senha</label>
         </div>
@@ -71,7 +71,7 @@ export default {
         margin: 30px 0;
     }
     .txt-field input{
-        widows: 100%;
+        width: 100%;
         padding: 0 5px;
         height: 40px;
         font-size: 16px;

@@ -2,18 +2,18 @@
 <div class="container">
     <div class="center">
     <h1>Login</h1>
-    <form method="post">
+    <form action="" v-on:submit="checkForm">
         <div class="txt-field">
-            <input type="text" required>
+            <input type="text" name='usuario' v-model="usuario"  ref="username" required>
             <span></span>
             <label>Usuário</label>
         </div>
-        <div class="txt-field">
-            <input type="text" required>
+        <div class="txt-field"> 
+            <input type="password" name='senha' v-model="senha" required>
             <span></span>
             <label>Informe sua senha</label>
         </div>
-        <button class="btn" @click="$router.push('/')">Login</button>
+        <button class="btn" @click.prevent="processLogin()">Login</button>
         <router-link to='/register' class="btn">Cadastre-se</router-link>
     </form>
     </div>
@@ -23,7 +23,34 @@
 
 <script>
 export default {
-    name: 'LoginView'
+
+name: 'LoginView',
+    data(){
+        return {
+            usuario: null,
+            senha: null,
+            realUsername: 'admin',
+            realPassword: '1234'
+        }
+    },
+    methods: {
+        processLogin(){
+            if(this.usuario == this.realUsername && this.senha == this.realPassword){
+                localStorage.setItem('isLoggedIn', 'yes')
+                this.$router.push('/')
+            }else{
+                alert('Usuário ou Senha incorretos')
+                this.usuario = ''
+                this.senha = ''
+                this.$refs.username.focus()
+            }
+        }
+    },
+    mounted(){
+        if(localStorage.getItem('isLoggedIn') == 'yes'){
+            this.$router.push('/')
+        }
+    }
 }
 </script>
 
@@ -62,13 +89,13 @@ export default {
         margin: 30px 0;
     }
     .txt-field input{
-        widows: 100%;
+        width: 100%;
         padding: 0 5px;
         height: 40px;
         font-size: 16px;
         border: none;
         background: none;
-        outline: none;
+       outline: none;
     }
 
     .txt-field label{
