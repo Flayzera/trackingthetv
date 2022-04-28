@@ -13,7 +13,7 @@
           <span></span>
           <label>Informe seu e-mail</label>
         </div>
-        <select class="form-select" aria-label="Default select example" name="select" v-model="select"> Assuntos
+        <select class="mb-2 form-select" aria-label="Default select example" name="select" v-model="select"> Assuntos
           <option value="0" selected>Assuntos</option>
           <option value="1">Dúvidas</option>
           <option value="1">Problemas com o site</option>
@@ -43,19 +43,12 @@ export default {
     };
   },
   methods: {
-    cleanInputs() {
-      this.nome = "";
-      this.email = "";
-      this.select = 0;
-      this.mensagem = "";
-    },
     processValidation() {
-      let emailValidation = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}")
+      let emailValidation = new RegExp("[a-z0-9]+@[a-z]+[.]+[a-z]{2,3}")
       let res = emailValidation.test(this.email)
    
       if (this.nome == "") {
         alert("Informe o seu NOME!");
-        this.cleanInputs();
         this.$refs.nome.focus();
       } else if (this.email == "" || res == false) {
         alert("Informe seu EMAIL corretamente!");
@@ -63,15 +56,16 @@ export default {
         this.$refs.email.focus();
       } else if (this.mensagem == "") {
         alert("Preencha o campo com a sua MENSAGEM!");
-        this.cleanInputs();
         this.$refs.nome.focus();
       } else if (this.select != "1") {
         alert("Selecione um ASSUNTO");
-        this.cleanInputs();
         this.$refs.nome.focus();
       } else {
         alert("SUA MENSAGEM FOI ENVIADA COM SUCESSO!");
-        this.cleanInputs();
+        this.nome = '';
+        this.email = '';
+        this.select = 0;
+        this.mensagem = '';
         this.$refs.nome.focus();
       }
     },

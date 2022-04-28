@@ -1,29 +1,30 @@
+
 <template>
   <div class="container">
     <div class="center">
       <h1>Registre-se</h1>
-      <form>
+      <form method="POST" @submit="processRegister">
         <div class="txt-field">
-          <input type="text" required />
+          <input type="text" name="nome" v-model="nome" ref="nome" required />
           <span></span>
           <label>Nome Completo</label>
         </div>
         <div class="txt-field">
-          <input type="text" required />
+          <input type="text"  v-model="email" ref="email" required />
           <span></span>
           <label>E-mail</label>
         </div>
         <div class="txt-field">
-          <input type="text" required />
+          <input type="text" name="usuario" v-model="usuario" ref="usuario" required />
           <span></span>
           <label>Usuário</label>
         </div>
         <div class="txt-field">
-          <input type="text" required />
+          <input type="password" name="senha" v-model="senha" ref="senha" required />
           <span></span>
           <label>Senha</label>
         </div>
-        <router-link to="/" class="btn">Cadastre-se</router-link>
+        <button class="btn" type="submit">Cadastre-se</button>
       </form>
     </div>
   </div>
@@ -32,6 +33,70 @@
 <script>
 export default {
   name: "RegisterView",
+  data(){
+    return{
+      nome: null,
+      email: null,
+      usuario: null,
+      senha: null
+    }
+  },
+  methods: {
+    processRegister(){
+      /* eslint-disable */
+      let emailValidation = new RegExp("[a-zA-Z0-9]+@[a-z]+[.]+[a-z]{2,3}")
+      let passwordValidation = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/)
+      let resEmail = emailValidation.test(this.email)
+      let resPassword = passwordValidation.test(this.senha)
+      console.log(resPassword)
+
+      let result = false;
+   
+      if (this.nome == "") {
+        alert("Informe o seu NOME!");
+        this.$refs.nome.focus();
+      } else if (this.email == "" || resEmail == false) {
+        alert("Informe seu EMAIL corretamente!");
+        this.email = "";
+        this.$refs.email.focus();
+      } else if (this.usuario == "") {
+        alert("INforme o seu USUÁRIO");
+        this.$refs.usuario.focus();
+      } else if (this.senha == "" || resPassword == false) {
+        alert("Sua deve conter no mínimo 8 caracteres, dentre eles pelo menos 1 letra maiúscula e 1 número");
+        this.senha = "";
+        this.$refs.senha.focus();
+      }else{
+        result = true;
+        
+      } 
+      return result;
+    },
+    async createUsers(e){
+    
+      e.preventDefault();
+
+      let ok = this.processRegister();
+      if(ok){
+      const data = {
+        nome: this.nome,
+        email: this.email,
+        usuario: this.usuario,
+        senha: this.senha
+      }
+      const dataJson = data;
+      console.log(dataJson)
+      const req = await fetch("http://localhost:3000/users", {
+        method: "POST",
+        headers: {"Contetn-Type": "aplication/json"},
+        body: dataJson
+      });
+      const res = await req.json()
+      console.log(res)
+      alert("Cadastro concluido com sucesso!!")
+      
+    }
+  }
 };
 </script>
 

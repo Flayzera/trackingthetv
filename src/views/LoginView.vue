@@ -2,7 +2,7 @@
   <div class="container">
     <div class="center">
       <h1>Login</h1>
-      <form action="" v-on:submit="checkForm">
+      <form @submit="checkForm">
         <div class="txt-field">
           <input type="text" name="usuario" v-model="usuario" ref="username" required/>
           <span></span>
