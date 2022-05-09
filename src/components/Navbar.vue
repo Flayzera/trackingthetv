@@ -3,20 +3,27 @@
     <router-link to="/" id="txt-url">Tracking the TV</router-link>
     <router-link to="/about">Sobre</router-link>
     <router-link to="/contact">Contato</router-link>
-    <a href="#" @click.prevent="logOut">Logout</a>
+    <a href="#" v-if="logged" @click.prevent="logOut">Logout</a>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: "NavbarView",
 
   methods: {
+    ...mapActions(['invertLogged']),
     logOut() {
-      localStorage.removeItem("isLoggedIn");
       this.$router.push("/login");
+      this.invertLogged();
     },
   },
+  computed:{
+   logged(){
+     return this.$store.state.logged
+   }
+  }
 };
 </script>
 

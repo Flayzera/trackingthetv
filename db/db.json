@@ -1,4 +1,40 @@
 {
   "users": [
+    {
+      "nome": "paulo ",
+      "email": "paulo@gmail.com",
+      "usuario": "feellevack",
+      "senha": "Cartola123",
+      "id": 1
+    },
+    {
+      "nome": "PHZIM",
+      "email": "paulo45665465@gmail.com",
+      "usuario": "annegabs",
+      "senha": "Chitmolafoca123",
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "titulo": "A era do Gelo",
+      "data_lancamento": "22 de Março de 2002",
+      "genero": "Aventura, comédia",
+      "produtora": "Blue Sky Studios, 20th Century Studios, 20th Century Fox Home Entertainment",
+      "diretor": "Chris Wedge, Carlos Saldanha",
+      "roteiro": "Mike Thurmeier, Galen T. Chu",
+      "capa": "../img/aeradogelo.jpeg",
+      "id": 1
+    },
+    {
+      "titulo": "Era uma vez...",
+      "data_lancamento": "25 de Julho de 2008 (Brasil)",
+      "genero": "Ação, drama, romance, música",
+      "produtora": "Conspiração Filmes",
+      "diretor": "Breno Silveira",
+      "roteiro": "Michael Waldron",
+      "capa": "../img/eraumavez.jpeg",
+      "id": 2
+    }
   ]
 }

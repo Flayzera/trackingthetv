@@ -21,24 +21,37 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex'
 export default {
   name: "LoginView",
   data() {
     return {
       usuario: null,
-      senha: null,
-      realUsername: "admin",
-      realPassword: "1234",
+      senha: null
     };
   },
   methods: {
-    processLogin() {
-      if (
-        this.usuario == this.realUsername &&
-        this.senha == this.realPassword
-      ) {
-        localStorage.setItem("isLoggedIn", "yes");
+    ...mapActions(['invertLogged']),
+    async getUsers(){
+        const req = await fetch("http://localhost:3000/users", {
+          method: 'GET'
+        })
+        .then(response => response.json())
+        .then(data => data);
+
+        return req;
+    },
+    async processLogin() {
+      let users = await this.getUsers()
+      let logged = false;
+      users.forEach((item) => {
+        if(this.usuario == item.usuario && this.senha == item.senha){
+          logged = true;
+        }
+      })
+      if (logged) {
         this.$router.push("/");
+        this.invertLogged();
       } else {
         alert("Usuário ou Senha incorretos");
         this.usuario = "";
@@ -47,8 +60,11 @@ export default {
       }
     },
   },
+  computed: {
+    ...mapState(['logged',])
+  },
   mounted() {
-    if (localStorage.getItem("isLoggedIn") == "yes") {
+    if (this.logged) {
       this.$router.push("/");
     }
   },
@@ -59,7 +75,6 @@ export default {
 .container {
   margin: 0;
   padding: 0;
-  height: 100vh;
   overflow: hidden;
 }
 

@@ -42,15 +42,14 @@ export default {
     }
   },
   methods: {
-    processRegister(){
+    processRegister(e){
+      e.preventDefault();
       /* eslint-disable */
       let emailValidation = new RegExp("[a-zA-Z0-9]+@[a-z]+[.]+[a-z]{2,3}")
       let passwordValidation = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/)
       let resEmail = emailValidation.test(this.email)
       let resPassword = passwordValidation.test(this.senha)
-      console.log(resPassword)
 
-      let result = false;
    
       if (this.nome == "") {
         alert("Informe o seu NOME!");
@@ -67,37 +66,31 @@ export default {
         this.senha = "";
         this.$refs.senha.focus();
       }else{
-        result = true;
+        this.createUsers();
+        alert("Cadastro realizado com sucesso!");
+        this.$router.push('/login');
         
       } 
-      return result;
     },
-    async createUsers(e){
-    
-      e.preventDefault();
-
-      let ok = this.processRegister();
-      if(ok){
+    async createUsers(){
+        
       const data = {
         nome: this.nome,
         email: this.email,
         usuario: this.usuario,
         senha: this.senha
       }
-      const dataJson = data;
-      console.log(dataJson)
+      const dataJson = JSON.stringify(data);
       const req = await fetch("http://localhost:3000/users", {
         method: "POST",
-        headers: {"Contetn-Type": "aplication/json"},
+        headers: {"Content-Type": "application/json"},
         body: dataJson
       });
       const res = await req.json()
-      console.log(res)
-      alert("Cadastro concluido com sucesso!!")
       
     }
   }
-};
+}
 </script>
 
 <style scoped>

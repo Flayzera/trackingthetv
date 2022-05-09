@@ -5,6 +5,9 @@ import ContactView from '../views/ContactView'
 import LoginView from '../views/LoginView'
 import RegisterView from '../views/RegisterView'
 import InfoThisIsUs from '../views/InfoThisisus'
+import InfoAboutTime from '../views/InfoAboutTime'
+import InfoKimetsu from '../views/InfoKimetsu'
+import InfoDrEstranho from '../views/InfoDrEstranho.vue'
 
 const routes = [
   {
@@ -37,7 +40,25 @@ const routes = [
     name: 'InfoThisIsUs',
     component: InfoThisIsUs
 
-  }
+  },
+  {
+    path: '/info2',
+    name: 'InfoAboutTime',
+    component: InfoAboutTime
+
+  },
+  {
+    path: '/info3',
+    name: 'InfoKimetsu',
+    component: InfoKimetsu
+
+  },
+  {
+    path: '/info4',
+    name: 'InfoDrEstranho',
+    component: InfoDrEstranho
+
+  },
 ]
 
 const router = createRouter({
