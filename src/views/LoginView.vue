@@ -4,7 +4,7 @@
       <h1>Login</h1>
       <form @submit="checkForm">
         <div class="txt-field">
-          <input type="text" name="usuario" v-model="usuario" ref="username" required/>
+          <input autocomplete="off" type="text" name="usuario" v-model="usuario" ref="username" required/>
           <span></span>
           <label>Usuário</label>
         </div>
@@ -76,6 +76,7 @@ export default {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background: black;
 }
 
 .center {
@@ -84,7 +85,6 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  background: #fff;
   border-radius: 1 0px;
 }
 
@@ -101,7 +101,7 @@ export default {
 
 form .txt-field {
   position: relative;
-  border-bottom: 2px solid #adadad;
+  border-bottom: 2px solid black;
   margin: 30px 0;
 }
 .txt-field input {
@@ -118,7 +118,7 @@ form .txt-field {
   position: absolute;
   top: 50%;
   left: 5px;
-  color: #adadadad;
+  color: black;
   transform: translateY(-50%);
   font-size: 16px;
   pointer-events: none;
@@ -132,18 +132,12 @@ form .txt-field {
   left: 0;
   width: 0%;
   height: 2px;
-  background: black;
-  transition: 0.5s;
 }
 
 .txt-field input:focus ~ label,
 .txt-field input:valid ~ label {
   top: -5px;
   color: black;
-}
-.txt-field input:focus ~ span::before,
-.txt-field input:valid ~ span::before {
-  width: 100%;
 }
 
 .btn {
@@ -159,7 +153,7 @@ form .txt-field {
   outline: none;
 }
 .btn:hover {
-  border-color: #adadad;
+  background-color: rgb(3, 73, 94);
   transition: 0.5s;
 }
 </style>

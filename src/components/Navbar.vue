@@ -29,12 +29,12 @@ export default {
 
 <style scoped>
 #nav {
-  background-color: #222;
+  background-color: #607873;
   padding: 15px 50px;
   display: flex;
   justify-content: flex-end;
+  background: black;
 }
-
 #nav a {
   color: #fff;
   text-decoration: none;
@@ -47,7 +47,5 @@ export default {
   margin: auto;
   margin-left: 0;
 }
-#nav a:hover {
-  color: #fff;
-}
+
 </style>

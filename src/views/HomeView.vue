@@ -99,10 +99,14 @@ export default {
 </script>
 
 <style scoped>
+.container{
+  margin: 100px;
+}
 h1 {
   font-weight: bold;
-  margin-top: 70px;
+  margin-top: 30px;
   font-size: 96px;
+  color: black;
 }
 
 .form-control {

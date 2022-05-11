@@ -19,6 +19,4 @@ export default createStore({
       context.commit('invertLogged')
     }
   },
-  modules: {
-  }
 })

@@ -15,7 +15,6 @@
         </p>
         <p class="plataforma">PLATAFORMAS DISPONÍVEIS: </p>
         <a href="https://www.primevideo.com/detail/0FJWBCL8OMLZ4BIHT7RYH54Z97/ref=atv_dp?language=pt_BR"><img class="png" src="../img/primevideo.png"></a>
-        <a href="https://www.starplus.com/pt-br/series/this-is-us/2aoqr1oEavrr"><img class="png" src="../img/starplus.png"></a>
         <a href="https://tv.apple.com/br/movie/questao-de-tempo/umc.cmc.2vfd635fg0hxxlsqcetlzw8mp"><img class="png" src="../img/apletv.jpeg"></a>
         <a href="https://play.google.com/store/movies/details/Quest%C3%A3o_de_Tempo?id=-r94X8AwZhg"><img src="../img/google-play-movies.jpg"></a>
       </div>
@@ -30,24 +29,34 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
 .png{
   width: 90px;
   height: 90px;
-  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
 }
 li{
-   margin-top: 10px;
-   list-style-type: none;
+  margin-top: 10px;
+  list-style-type: none;
+  font-family: Rajdhani, sans-serif;
+  font-weight: 800; 
 }
 
 .plataforma{
   font-size: 17pt;
   font-weight: bold;
+  font-family: Rajdhani, sans-serif;
+  font-weight: 800;
 }
 
 .text{
   flex: 1;
   margin-top: 100px;
+  font-family: Rajdhani, sans-serif;
+  font-weight: 800; 
+  text-align: justify;
 }
 
 .img{
@@ -61,7 +70,4 @@ li{
   margin: 36px;
 }
 
-.sinopse{
-  text-align: justify;
-}
 </style>

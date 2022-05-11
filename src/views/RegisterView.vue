@@ -5,17 +5,17 @@
       <h1>Registre-se</h1>
       <form method="POST" @submit="processRegister">
         <div class="txt-field">
-          <input type="text" name="nome" v-model="nome" ref="nome" required />
+          <input autocomplete="off" type="text" name="nome" v-model="nome" ref="nome" required />
           <span></span>
           <label>Nome Completo</label>
         </div>
         <div class="txt-field">
-          <input type="text"  v-model="email" ref="email" required />
+          <input autocomplete="off" type="text"  v-model="email" ref="email" required />
           <span></span>
           <label>E-mail</label>
         </div>
         <div class="txt-field">
-          <input type="text" name="usuario" v-model="usuario" ref="usuario" required />
+          <input autocomplete="off" type="text" name="usuario" v-model="usuario" ref="usuario" required />
           <span></span>
           <label>Usuário</label>
         </div>
@@ -107,8 +107,8 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  background: #fff;
   border-radius: 1 0px;
+  margin-top: 50px;
 }
 
 .center h1 {
@@ -124,7 +124,7 @@ export default {
 
 form .txt-field {
   position: relative;
-  border-bottom: 2px solid #adadad;
+  border-bottom: 2px solid;
   margin: 30px 0;
 }
 .txt-field input {
@@ -141,7 +141,7 @@ form .txt-field {
   position: absolute;
   top: 50%;
   left: 5px;
-  color: #adadadad;
+  color: black;
   transform: translateY(-50%);
   font-size: 16px;
   pointer-events: none;
@@ -182,7 +182,7 @@ form .txt-field {
   outline: none;
 }
 .btn:hover {
-  border-color: #adadad;
+  background-color: rgb(3, 73, 94);
   transition: 0.5s;
 }
 </style>

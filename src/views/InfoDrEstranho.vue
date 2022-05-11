@@ -26,24 +26,27 @@ export default {
 </script>
 
 <style scoped>
-.png{
-  width: 90px;
-  height: 90px;
-  padding: 5px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 li{
-   margin-top: 10px;
-   list-style-type: none;
+  margin-top: 10px;
+  list-style-type: none;
+  font-family: Rajdhani, sans-serif;
+  font-weight: 600;
 }
 
 .plataforma{
   font-size: 17pt;
   font-weight: bold;
+  font-family: Rajdhani, sans-serif;
+  font-weight: 600;
 }
 
 .text{
   flex: 1;
   margin-top: 100px;
+  font-family: Rajdhani, sans-serif;
+  font-weight: 600; 
+  text-align: justify;
 }
 
 .img{
@@ -57,7 +60,5 @@ li{
   margin: 36px;
 }
 
-.sinopse{
-  text-align: justify;
-}
+
 </style>

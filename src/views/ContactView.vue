@@ -4,12 +4,12 @@
       <h1>Contate-nos</h1>
       <form action="" v-on:submit="checkForm">
         <div class="txt-field">
-          <input type="text" name="nome" v-model="nome" ref="nome" required />
+          <input autocomplete="off" type="text" name="nome" v-model="nome" ref="nome" required />
           <span></span>
           <label>Informe seu nome</label>
         </div>
         <div class="txt-field">
-          <input type="text" name="email" v-model="email" ref="email" required/>
+          <input autocomplete="off" type="text" name="email" v-model="email" ref="email" required/>
           <span></span>
           <label>Informe seu e-mail</label>
         </div>
@@ -20,7 +20,7 @@
           <option value="1">Feedback</option>
         </select>
         <div>
-          <label class="mb-2">Mensagem</label>
+          <label class="mb-2 " style="color: black;">Mensagem</label>
           <textarea type="text" class="msg" name="mensagem" v-model="mensagem"></textarea>
         </div>
         <button class="btn" @click.prevent="processValidation()">Enviar</button>
@@ -74,21 +74,13 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  overflow: hidden;
-  float: left;
-}
-
 .center {
+  margin-top: 70px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  background: #fff;
   border-radius: 1 0px;
 }
 
@@ -105,7 +97,7 @@ export default {
 
 form .txt-field {
   position: relative;
-  border-bottom: 2px solid #adadad;
+  border-bottom: 2px solid black;
   margin: 30px 0;
 }
 .txt-field input {
@@ -122,7 +114,7 @@ form .txt-field {
   position: absolute;
   top: 50%;
   left: 5px;
-  color: #adadadad;
+  color:black;  
   transform: translateY(-50%);
   font-size: 16px;
   pointer-events: none;
@@ -163,7 +155,7 @@ form .txt-field {
   outline: none;
 }
 .btn:hover {
-  border-color: #adadad;
+  background-color: rgb(3, 73, 94);
   transition: 0.5s;
 }
 
@@ -172,7 +164,8 @@ form .txt-field {
   margin-bottom: 20px;
   height: 150px;
   width: 100%;
-  border: 2px solid black;
+  border: none;
   padding: 5px;
+  
 }
 </style>

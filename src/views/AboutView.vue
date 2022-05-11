@@ -39,7 +39,7 @@ export default {
 }
 
 .title {
-  margin-top: 230px;
+  margin-top: 80px;
 }
 </style>
 

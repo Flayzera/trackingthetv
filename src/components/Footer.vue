@@ -11,8 +11,7 @@ export default {
 </script>
 
 <style scoped>
-.fixed-bottom{
-  background-color: #fff;
-  margin-top: 140px;
+.p{
+  color: black;
 }
 </style>

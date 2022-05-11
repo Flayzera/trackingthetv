@@ -3,8 +3,9 @@
     <div class="row">
       <NavbarView />
       <router-view />
-      <FooterView />
+     
     </div>
+     <FooterView />
   </div>
 </template>
 
@@ -23,13 +24,10 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   min-height: 100vh;
-  margin-bottom: 120px;
+  background-image: linear-gradient(180deg, #bce5ff 0, #9db9f2 50%, #7e8fb3 100%);
 }
-
 nav {
   padding: 30px;
 }
@@ -41,5 +39,8 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+.row{
+  margin-right: 0 !important;
 }
 </style>
