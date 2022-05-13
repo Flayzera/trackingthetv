@@ -39,24 +39,20 @@ export default {
 }
 li{
   margin-top: 10px;
-  list-style-type: none;
-  font-family: Rajdhani, sans-serif;
-  font-weight: 800; 
+  list-style-type: none; 
+  color: black;
 }
 
 .plataforma{
   font-size: 17pt;
   font-weight: bold;
-  font-family: Rajdhani, sans-serif;
-  font-weight: 800;
 }
 
 .text{
   flex: 1;
-  margin-top: 100px;
-  font-family: Rajdhani, sans-serif;
-  font-weight: 800; 
+  margin-top: 100px; 
   text-align: justify;
+  color: black;
 }
 
 .img{

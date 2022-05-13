@@ -34,6 +34,7 @@ export default {
   display: flex;
   justify-content: flex-end;
   background: black;
+  
 }
 #nav a {
   color: #fff;

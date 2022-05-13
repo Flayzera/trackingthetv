@@ -50,23 +50,20 @@ export default {
 li{
    margin-top: 10px;
    list-style-type: none;
-   font-family: Rajdhani, sans-serif;
-   font-weight: 600;
+   color: black;
    
 }
 
 .plataforma{
   font-size: 17pt;
   font-weight: bold;
-  font-family: Rajdhani, sans-serif;
-  font-weight: 600;
+  color: black;
 }
 
 .text{
   flex: 1;
   margin-top: 100px;
-  font-family: Rajdhani, sans-serif;
-  font-weight: 600;
+  color: black;
   text-align: justify;
 }
 
@@ -80,7 +77,4 @@ li{
   flex-direction: row;
   margin: 36px;
 }
-
-
-
 </style>

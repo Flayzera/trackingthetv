@@ -26,8 +26,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: #2c3e50;
   min-height: 100vh;
-  background-image: linear-gradient(180deg, #bce5ff 0, #9db9f2 50%, #7e8fb3 100%);
-}
+  background-size: cover;
+  background-image:url('https://img.freepik.com/fotos-gratis/fundo-azul-do-gradiente-de-luxo-abstrato-liso-azul-escuro-com-vinheta-preta-studio-banner_1258-52379.jpg?t=st=1652369036~exp=1652369636~hmac=425743d50bd10f4d70b96a71bcb6689352a3f65913439aed2662476a73c03d3c&w=900');
+  }
 nav {
   padding: 30px;
 }

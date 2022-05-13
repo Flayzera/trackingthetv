@@ -127,6 +127,7 @@ h1 {
 
 .title {
   font-weight: bold;
+  color: black;
 }
 
 .row {

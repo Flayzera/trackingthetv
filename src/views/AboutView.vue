@@ -32,14 +32,24 @@ export default {
   background-color: rgb(0, 0, 0);
   color: #fff;
   border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(66, 194, 211, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .content-box {
   padding: 40px;
+  color: black;
 }
 
 .title {
   margin-top: 80px;
+  color: black;
 }
 </style>
 

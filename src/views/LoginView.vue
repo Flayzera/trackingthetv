@@ -71,7 +71,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style  scoped>
 .container {
   margin: 0;
   padding: 0;
@@ -85,13 +85,19 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  border-radius: 1 0px;
+  height: 400px;
+  background: rgba(234, 241, 241, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .center h1 {
   text-align: center;
   padding: 0 0 20px 0;
   border-bottom: 1px solid black;
+  margin-top: 15px;
+  color: black;
 }
 
 .center form {
@@ -153,7 +159,8 @@ form .txt-field {
   outline: none;
 }
 .btn:hover {
-  background-color: rgb(3, 73, 94);
+  background-color: rgb(15, 122, 158);
   transition: 0.5s;
 }
+
 </style>
