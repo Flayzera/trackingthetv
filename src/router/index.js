@@ -1,4 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import VueRouter from 'vue-router'
+import Vue from 'vue'
+
 import HomeView from '../views/HomeView'
 import AboutView from '../views/AboutView'
 import ContactView from '../views/ContactView'
@@ -8,6 +10,9 @@ import InfoThisIsUs from '../views/InfoThisisus'
 import InfoAboutTime from '../views/InfoAboutTime'
 import InfoKimetsu from '../views/InfoKimetsu'
 import InfoDrEstranho from '../views/InfoDrEstranho.vue'
+import InfoEraDoGelo from '../views/InfoEraDoGelo'
+
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -57,13 +62,17 @@ const routes = [
     path: '/info4',
     name: 'InfoDrEstranho',
     component: InfoDrEstranho
+  },
+  {
+    path: '/info5',
+    name: 'InfoEraDoGelo',
+    component: InfoEraDoGelo
 
   },
 ]
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+const router = new VueRouter({
+    routes // short for `routes: routes`
 })
 
 export default router

@@ -5,7 +5,7 @@
         <img src="../img/abouttime.jpg" />
         <li>20 de dezembro de 2013 No cinema / 2h 03min / Romance</li>
         <li>Direção: Richard Curtis</li>
-        <li>Roteiro: Richard Curtis</li>
+        <li>Roteiro: Michael Waldron</li>
         <li>Elenco: Domhnall Gleeson, Bill Nighy, Rachel McAdams</li>
         <li>Título original: About Time</li>
       </div> 

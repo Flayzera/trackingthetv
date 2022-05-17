@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="title text-center">
     <h1 class="text-align">QUEM SOMOS</h1>
   </div>
@@ -11,6 +12,7 @@
         momento, encontrando todas as opções em um só lugar.
       </div>
     </div>
+  </div>
   </div>
 </template>
 

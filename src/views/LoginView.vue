@@ -2,7 +2,7 @@
   <div class="container">
     <div class="center">
       <h1>Login</h1>
-      <form @submit="checkForm">
+      <form>
         <div class="txt-field">
           <input autocomplete="off" type="text" name="usuario" v-model="usuario" ref="username" required/>
           <span></span>

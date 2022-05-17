@@ -52,7 +52,7 @@ export default {
         this.$refs.nome.focus();
       } else if (this.email == "" || res == false) {
         alert("Informe seu EMAIL corretamente!");
-        this.email = "";
+        this.email = " ";
         this.$refs.email.focus();
       } else if (this.mensagem == "") {
         alert("Preencha o campo com a sua MENSAGEM!");
@@ -81,7 +81,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: 500px;
+  padding: 16px 0;
   border-radius: 1 0px;
   background: rgba(234, 241, 241, 0.1);
   border-radius: 16px;
@@ -94,6 +94,7 @@ export default {
   text-align: center;
   padding: 0 0 20px 0;
   border-bottom: 1px solid black;
+  color: #000;
 }
 
 .center form {

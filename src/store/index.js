@@ -1,13 +1,11 @@
-import { createStore } from 'vuex'
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-export default createStore({
+Vue.use(Vuex);
+
+const store = new Vuex.Store({
   state: {
-    logged: false
-  },
-  getters: {
-    getLogged(state){
-      return state.logged
-    }
+    logged: false,
   },
   mutations: {
     invertLogged(state){
@@ -20,3 +18,5 @@ export default createStore({
     }
   },
 })
+
+export default store

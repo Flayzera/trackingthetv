@@ -20,6 +20,20 @@
       "usuario": "sadasd",
       "senha": "Treshandleona1323",
       "id": 3
+    },
+    {
+      "nome": "paulo henrique",
+      "email": "paulo@gmail.com",
+      "usuario": "feellevack",
+      "senha": "Cartola123",
+      "id": 4
+    },
+    {
+      "nome": "paulo",
+      "email": "paulo55@gmail.com",
+      "usuario": "feellevack455",
+      "senha": "Cartola123",
+      "id": 5
     }
   ],
   "posts": [
@@ -30,7 +44,8 @@
       "produtora": "Blue Sky Studios, 20th Century Studios, 20th Century Fox Home Entertainment",
       "diretor": "Chris Wedge, Carlos Saldanha",
       "roteiro": "Mike Thurmeier, Galen T. Chu",
-      "capa": "../img/aeradogelo.jpeg",
+      "capa": "img/aeradogelo.jpg",
+      "path": "info5",
       "id": 1
     },
     {
@@ -40,8 +55,20 @@
       "produtora": "Conspiração Filmes",
       "diretor": "Breno Silveira",
       "roteiro": "Michael Waldron",
-      "capa": "../img/eraumavez.jpeg",
+      "capa": "img/abouttime.jpg",
+      "path": "info2",
       "id": 2
+    },
+    {
+      "titulo": "Doutor Estranho",
+      "data_lancamento": "5 de maio de 2022 (Cinema)",
+      "genero": "Fantasia, Ação, Aventura",
+      "produtora": "Marvel Studios",
+      "diretor": "Sam Raimi",
+      "roteiro": "Michael Waldron, Stan Lee",
+      "capa": "img/doctorstrange2.jpg",
+      "path": "info4",
+      "id": 3
     }
   ]
 }
