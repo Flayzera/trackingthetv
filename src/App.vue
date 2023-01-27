@@ -3,7 +3,6 @@
     <div class="row">
       <NavbarView />
       <router-view />
-     
     </div>
      <FooterView />
   </div>
